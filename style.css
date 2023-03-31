@@ -26,13 +26,34 @@ button:hover {
     border-radius: 5px;
 }
 
+hr {
+    background-color: white;
+    width: 80%;
+}
+
 #section_deseo{
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
-#section_lista ul{
+#section_lista{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#deseos_nuevos, #deseos_cumplidos{
+    width: 48%;
+    padding: 20px 100px;
+    box-sizing: border-box;
+    
+    
+}
+
+#deseos_nuevos{
+    border-right: 2px solid #ccc;
 }
 
