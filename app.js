@@ -15,13 +15,5 @@ button.addEventListener("click", function() {
     listaDeseo.appendChild(nuevoElemento);
   }
 
-  function agregarDeseoNuevo() {
-    var formDeseo = document.getElementById("form_deseo");
-    var deseo_input = formDeseo.elements['deseo_input'].value
-    var listaDeseo = document.getElementById('lista_deseos_nuevos');
-    var nuevoElemento = document.createElement("li");
-    nuevoElemento.innerText = deseo_input;
-    listaDeseo.appendChild(nuevoElemento);
-  }
 
 
