@@ -1,0 +1,19 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: darkcyan;
+    color:white;
+    font-family: Tahoma;
+    font-size: 12px;
+  }
+
+h1{
+    text-align: center;
+}
+
+
+#section_deseo{
+    display: flex;
+    justify-content: center;
+}

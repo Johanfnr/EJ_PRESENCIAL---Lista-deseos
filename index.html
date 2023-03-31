@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Lista deseos</title>
+</head>
+<body>
+    <h1>Lista de Deseos</h1>
+    <br>
+    <section id="section_deseo">
+        <form id="form_deseo">
+            <label for="deseo-label">Deseo: </label>
+            <input type="text" id="deseo_input" name="deseo_input" placeholder="Escribe tu deseo">
+            <button type="button" id="buttom_deseo_nuevo" onclick="agregarDeseoNuevo()">Agregar</button>
+        </form>
+    </section>
+
+    <section class="section_lista">
+        <div id="deseos_nuevos">
+            <h4>Deseos Agregados</h4>
+            <button type="button" id="agr_deseo_button" >Cumplido</button>
+            <button type="button" id="elim_deseo_button" >Borrar</button>
+            <ul id="lista_deseos_nuevos">
+            </ul>
+        </div>
+        <div id="deseos_cumplidos">
+            <h4>Deseos Cumplidos</h4>
+            <ul id="lista_deseos_cumplidos">
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+    
+</body>
+</html>
