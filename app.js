@@ -1,13 +1,10 @@
 
 
-let button = document.getElementById("buttom_deseo_nuevo");
-
-  function agregarDeseoNuevo() {
+function agregarDeseoNuevo() {
       var formDeseo = document.getElementById("form_deseo");
       var deseo_input = formDeseo.elements['deseo_input'].value
       var listaDeseo = document.getElementById('lista_deseos_nuevos');
       var nuevoDeseo = document.createElement("li");
-      var button1 = document.createElement("button");
       nuevoDeseo.innerText = deseo_input;
       listaDeseo.appendChild(nuevoDeseo);
 
@@ -22,7 +19,6 @@ let button = document.getElementById("buttom_deseo_nuevo");
       var textButtonM = document.createTextNode("Mover");
       botonMover.appendChild(textButtonM);
       botonMover.addEventListener("click", function() {
-          // Obtener la lista de destino
        var listaCumplidos = document.getElementById("lista_deseos_cumplidos");
        if (this.parentElement.parentElement.id === "lista_deseos_cumplidos") {
          listaCumplidos = document.getElementById("lista_deseos_nuevos");
@@ -34,8 +30,38 @@ let button = document.getElementById("buttom_deseo_nuevo");
     nuevoDeseo.appendChild(botonEliminar);
     nuevoDeseo.appendChild(botonMover);
 
-    document.getElementById("miLista").appendChild(nuevoDeseo);
-    document.getElementById("nuevoDeseo").value = "";
+    document.getElementById("lista_deseos_nuevos").appendChild(nuevoDeseo);
+    document.getElementById("deseo_input").value = "";
   }
 
+  // Contador de elementos
 
+      const listaDeseosNuevos = document.querySelector('#lista_deseos_nuevos');
+      const contadorDeseosNuevos = document.querySelector('#cont_deseos_nuevos');
+  
+      const actualizarContador = function() {
+        contadorDeseosNuevos.innerText = `Tienes ${listaDeseosNuevos.children.length} deseo(s) por cumplir.`;
+      };
+  
+      actualizarContador();
+  
+      const observer = new MutationObserver(function() {
+        actualizarContador();
+      });
+      observer.observe(listaDeseosNuevos, { childList: true });
+
+      
+
+      const listaDeseosCumplidos = document.querySelector('#lista_deseos_cumplidos');
+      const contadorDeseosCumplidos = document.querySelector('#cont_deseos_cumplidos');
+  
+      const actualizarContador2 = function() {
+        contadorDeseosCumplidos.innerText = `Culminaste ${listaDeseosCumplidos.children.length} deseo(s).`;
+      };
+  
+      actualizarContador2();
+  
+      const observer2 = new MutationObserver(function() {
+        actualizarContador2();
+      });
+      observer2.observe(listaDeseosCumplidos, { childList: true });

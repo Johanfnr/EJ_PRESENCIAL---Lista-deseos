@@ -12,8 +12,27 @@ h1{
     text-align: center;
 }
 
+button {
+    background-color: indigo;
+    color: darkturquoise;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkturquoise;
+    color: indigo;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
 #section_deseo{
     display: flex;
     justify-content: center;
+}
+
+#section_lista ul{
+    display: flex;
+    flex-wrap: wrap;
 }
 
